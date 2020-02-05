@@ -19,3 +19,23 @@ main,div {
     width: 20vw;
     height: 20vw;
 }
+.active-box {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.active-movie {
+    background-color: aquamarine;
+    width: 50vw;
+    /* height: 20vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
