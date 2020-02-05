@@ -1,15 +1,19 @@
-.body-shaded {
+header {
+    background-color: black;
+    color: white
+}
+.main-shaded {
     position: relative;
     z-index: 1;
     background-color: aliceblue;
     opacity: 0.5;
 }
-body,div {
+main,div {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-div {
+.movies {
     background-color: red;
     color: white;
     width: 20vw;
