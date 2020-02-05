@@ -1,0 +1,17 @@
+.body-shaded {
+    position: relative;
+    z-index: 1;
+    background-color: aliceblue;
+    opacity: 0.5;
+}
+body,div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+div {
+    background-color: red;
+    color: white;
+    width: 20vw;
+    height: 20vw;
+}
