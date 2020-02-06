@@ -21,4 +21,7 @@ function hidden(eve) {
 let url = "https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=KDAvx939Yj9FsDsKrBSHeZi7BMzZHUqpQdLU5tfV"
 fetch(url)
     .then(res => res.json())
-    .then(res => console.log(res.data[0].fullName))
+    .then(res => {
+        console.log(res.data[0].fullName)
+        document.querySelector(".active-park").innerHTML = res.data[0].fullName
+    } )
