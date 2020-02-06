@@ -8,23 +8,23 @@ header {
     background-color: aliceblue;
     opacity: 0.5;
 }
-main {
+main, .text {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1vw 1vw 0 1vw;
+.all-parks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1vw;
 }
 .parks {
     background-color: red;
     color: white;
     width: 20vw;
     height: 20vw;
+    /* margin: 1vw 1vw 0 1vw; */
 }
 .active-box {
     position: absolute;
@@ -40,14 +40,17 @@ div {
     width: 20vw;
 
 }
-.active-park {
+.active-subox{
     background-color: aquamarine;
     width: 50vw;
-    height: 20vw;
+    /* height: 20vw; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* .active-park {
+    
+} */
 .hidden {
     display: none;
 }
