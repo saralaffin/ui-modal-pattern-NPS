@@ -42,4 +42,15 @@ fetch(url)
 
     function displayActive(eve) {
         console.log(eve.target.dataset.parkcode)
+        let activeUrl = "https://developer.nps.gov/api/v1/parks?parkCode=bepa&fields=images&api_key=KDAvx939Yj9FsDsKrBSHeZi7BMzZHUqpQdLU5tfV"
+        fetch(activeUrl)
+            .then(res => res.json())
+            .then(res => {
+                // document.querySelector(".active-park").innerHTML = res.data[0].fullName
+                // document.querySelector(".active-img").src = res.data[0].images[0].url
+                // document.querySelector(".active-description").innerHTML = res.data[0].description
+                console.log(res.data[0].fullName)
+                console.log(res.data[0].images[0].url)
+                console.log(res.data[0].description)
+            })        
     }
