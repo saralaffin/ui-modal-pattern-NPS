@@ -12,10 +12,11 @@ function shade() {
     document.querySelector(".active-box").classList.toggle("hidden")
 }
 // console.dir(document.querySelector("button"))
-document.querySelector("button").addEventListener("click", hidden)
+document.querySelector(".active-close").addEventListener("click", hidden)
+let activeNodes = document.querySelectorAll('*[class^="active"]')
 function hidden(eve) {
     // console.dir(eve.path[1])
-    eve.path[1].classList.toggle("hidden")
+    activeNodes.forEach(node => node.classList.toggle("hidden"))
 }
 
 
