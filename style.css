@@ -8,10 +8,17 @@ header {
     background-color: aliceblue;
     opacity: 0.5;
 }
-main,div {
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+div {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 1vw 1vw 0 1vw;
 }
 .parks {
     background-color: red;
@@ -31,7 +38,7 @@ main,div {
 .active-park {
     background-color: aquamarine;
     width: 50vw;
-    /* height: 20vw; */
+    height: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
