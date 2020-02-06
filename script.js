@@ -11,11 +11,11 @@ function shade() {
     main.classList.toggle("main-shaded")
     document.querySelector(".active-box").classList.toggle("hidden")
 }
-// console.dir(document.querySelector("button"))
+
+// close button functionality. Find all elements in the active class and hide them
 document.querySelector(".active-close").addEventListener("click", hidden)
 let activeNodes = document.querySelectorAll('*[class^="active"]')
-function hidden(eve) {
-    // console.dir(eve.path[1])
+function hidden() {
     activeNodes.forEach(node => node.classList.toggle("hidden"))
 }
 
@@ -29,12 +29,17 @@ fetch(url)
         for (let i = 0; i < 20; i++) {
             let park = document.createElement("div")
             park.setAttribute('class', 'parks')
+            park.setAttribute('data-parkCode', res.data[i].parkCode)
             park.innerHTML = res.data[i].fullName
             park.style.backgroundImage = `url('${res.data[i].images[0].url}')`
+            park.addEventListener("click",displayActive)
             document.querySelector(".all-parks").appendChild(park)
-            // document.querySelector(".active-img").src = res.data[0].images[0].url
         }
         document.querySelector(".active-park").innerHTML = res.data[0].fullName
         document.querySelector(".active-img").src = res.data[0].images[0].url
         document.querySelector(".active-description").innerHTML = res.data[0].description
     } )
+
+    function displayActive(eve) {
+        console.log(eve.target.dataset.parkcode)
+    }
