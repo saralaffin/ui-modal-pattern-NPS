@@ -1,5 +1,5 @@
 let main = document.querySelector("main")
-let divs = document.querySelectorAll(".movies")
+let divs = document.querySelectorAll(".parks")
 console.dir(main)
 console.dir(divs)
 divs.forEach(div => {
@@ -17,3 +17,19 @@ function hidden(eve) {
     console.dir(eve.path[1])
     eve.path[1].classList.toggle("hidden")
 }
+
+// Trying to get Trefle API to work
+// let url = "https://trefle.io/api/plants?q=rosemary?token=MURJbnk0V01lU2RWZGhJRnFNa015dz09"
+// // fetch(url, {
+// //     headers: {
+// //         'x-api-key': "MURJbnk0V01lU2RWZGhJRnFNa015dz09"
+// //     }
+// // })
+// fetch(url)
+//     .then(res => res.json())
+//     .then(res => console.log(res))
+
+let url = "https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=KDAvx939Yj9FsDsKrBSHeZi7BMzZHUqpQdLU5tfV"
+fetch(url)
+    .then(res => res.json())
+    .then(res => console.log(res))
