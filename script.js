@@ -42,7 +42,7 @@ fetch(url)
 
     function displayActive(eve) {
         console.log(eve.target.dataset.parkcode)
-        let activeUrl = "https://developer.nps.gov/api/v1/parks?parkCode=bepa&fields=images&api_key=KDAvx939Yj9FsDsKrBSHeZi7BMzZHUqpQdLU5tfV"
+        let activeUrl = "https://developer.nps.gov/api/v1/parks?parkCode="+eve.target.dataset.parkcode+"&fields=images&api_key=KDAvx939Yj9FsDsKrBSHeZi7BMzZHUqpQdLU5tfV"
         fetch(activeUrl)
             .then(res => res.json())
             .then(res => {
