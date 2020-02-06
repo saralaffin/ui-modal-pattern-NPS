@@ -29,6 +29,7 @@ fetch(url)
             let park = document.createElement("div")
             park.setAttribute('class', 'parks')
             park.innerHTML = res.data[i].fullName
+            park.style.backgroundImage = `url('${res.data[i].images[0].url}')`
             document.querySelector(".all-parks").appendChild(park)
             // document.querySelector(".active-img").src = res.data[0].images[0].url
         }

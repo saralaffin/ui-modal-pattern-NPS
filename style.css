@@ -20,7 +20,8 @@ main, .active-text, .parks {
     grid-gap: 1vw;
 }
 .parks {
-    background-color: red;
+    background-position: center;
+    background-size: cover;
     color: white;
     text-align: center;
     width: 20vw;
