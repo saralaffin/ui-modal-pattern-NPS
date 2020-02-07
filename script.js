@@ -26,9 +26,11 @@ fetch(url)
             let park = document.createElement("div")
             park.setAttribute('class', 'parks')
             park.setAttribute('data-parkCode', res.data[i].parkCode)
-            park.innerHTML = "<h5>"+res.data[i].fullName+"</h5>"
+            park.innerHTML = "<h5 class='hidden'>"+res.data[i].fullName+"</h5>"
             park.style.backgroundImage = `url('${res.data[i].images[0].url}')`
             park.addEventListener("click",displayActive)
+            park.addEventListener("mouseenter",showTitle)
+            park.addEventListener("mouseleave",showTitle)
             document.querySelector(".all-parks").appendChild(park)
         }
     } )
@@ -43,4 +45,8 @@ function displayActive(eve) {
             document.querySelector(".active-img").src = res.data[0].images[0].url
             document.querySelector(".active-description").innerHTML = res.data[0].description
         })        
+}
+
+function showTitle(eve) {
+    eve.target.querySelector("h5").classList.toggle("hidden")
 }
