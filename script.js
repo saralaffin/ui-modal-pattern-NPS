@@ -3,7 +3,6 @@ let allParks = document.querySelector(".all-parks")
 let divs = document.querySelectorAll(".parks")
 
 function shade() {
-    console.log("clicked!")
     allParks.classList.toggle("main-shaded")
 }
 
@@ -42,7 +41,7 @@ function displayActive(eve) {
         .then(res => {
             hidden()
             document.querySelector(".active-park").innerHTML = res.data[0].fullName
-            document.querySelector(".active-img").src = res.data[0].images[0].url
+            document.querySelector(".active-img").style.backgroundImage = `url('${res.data[0].images[0].url}')`
             document.querySelector(".active-description").innerHTML = res.data[0].description
         })        
 }
