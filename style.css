@@ -1,6 +1,17 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
 header {
     background-color: black;
-    color: white
+    color: white;    
+    font-weight: 700;
+    height: 3vw;
+    margin-bottom: 1vw;
+    padding-left: 3vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .main-shaded {
     position: relative;
@@ -8,7 +19,7 @@ header {
     background-color: aliceblue;
     opacity: 0.5;
 }
-main, .active-text, .parks {
+main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -22,10 +33,19 @@ main, .active-text, .parks {
 .parks {
     background-position: center;
     background-size: cover;
-    color: white;
-    text-align: center;
     width: 20vw;
     height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.parks > h5 {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 1vw;
 }
 .active-box {
     position: absolute;
@@ -39,19 +59,24 @@ main, .active-text, .parks {
 .active-img {
     height: 20vw;
     width: 20vw;
-
+    margin-right: 3vw;
 }
 .active-subox{
-    background-color: aquamarine;
+    background-color: blanchedalmond;
     width: 50vw;
     /* height: 20vw; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2vw;
+    box-shadow: 0 0 2vw 2vw rgba(0, 0, 0, 0.5);
 }
-/* .active-park {
-    
-} */
+.active-close {
+    display: float;
+    float: right;
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
 .hidden {
     display: none;
 }
