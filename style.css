@@ -141,10 +141,18 @@ main {
         grid-gap: 1vw;
     }
     .parks {
-        background-position: center;
-        background-size: cover;
         width: 15vw;
         height: 15vw;
     }
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .all-parks {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1vw;
+    }
+    .parks {
+        width: 25vw;
+        height: 25vw;
+    }
+  }
