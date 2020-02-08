@@ -155,4 +155,35 @@ main {
         width: 25vw;
         height: 25vw;
     }
+    .active-subox{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .active-img {
+        height: 50vw;
+        width: 100%;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .all-parks {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vw;
+    }
+    .parks {
+        width: 40vw;
+        height: 40vw;
+    }
+    .active-subox{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .active-img {
+        height: 50vw;
+        width: 100%;
+    }
   }
