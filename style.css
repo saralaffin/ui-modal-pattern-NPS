@@ -84,11 +84,11 @@ main {
 
 /* https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08 */
 .fade-in {
-    animation: fadeIn ease 3s;
-    -webkit-animation: fadeIn ease 3s;
-    -moz-animation: fadeIn ease 3s;
-    -o-animation: fadeIn ease 3s;
-    -ms-animation: fadeIn ease 3s;
+    animation: fadeIn ease 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
+    -moz-animation: fadeIn ease 1.5s;
+    -o-animation: fadeIn ease 1.5s;
+    -ms-animation: fadeIn ease 1.5s;
   }
   @keyframes fadeIn {
     0% {
@@ -132,4 +132,19 @@ main {
     }
     100% {
       opacity:1;
+    }
   }
+
+  @media screen and (min-width: 992px) {
+    .all-parks {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1vw;
+    }
+    .parks {
+        background-position: center;
+        background-size: cover;
+        width: 15vw;
+        height: 15vw;
+    }
+  }
+  
