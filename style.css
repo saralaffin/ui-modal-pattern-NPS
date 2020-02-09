@@ -78,112 +78,67 @@ main {
     background-color: rgba(255,255,255,0);
     border: none;
 }
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 1.5s ease;
+  }
+
 .hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s 1.5s, opacity ease 1.5s;
+  }
+@media screen and (min-width: 992px) {
+  .all-parks {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-gap: 1vw;
+  }
+  .parks {
+      width: 15vw;
+      height: 15vw;
+  }
 }
 
-/* https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08 */
-.fade-in {
-    animation: fadeIn ease 1.5s;
-    -webkit-animation: fadeIn ease 1.5s;
-    -moz-animation: fadeIn ease 1.5s;
-    -o-animation: fadeIn ease 1.5s;
-    -ms-animation: fadeIn ease 1.5s;
+@media screen and (max-width: 768px) {
+  .all-parks {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1vw;
   }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
+  .parks {
+      width: 25vw;
+      height: 25vw;
   }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
+  .active-subox{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
   }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
+  .active-img {
+      height: 50vw;
+      width: 100%;
   }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
+}
 
-  @media screen and (min-width: 992px) {
-    .all-parks {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 1vw;
-    }
-    .parks {
-        width: 15vw;
-        height: 15vw;
-    }
+@media screen and (max-width:576px) {
+  .all-parks {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1vw;
   }
-
-  @media screen and (max-width: 768px) {
-    .all-parks {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1vw;
-    }
-    .parks {
-        width: 25vw;
-        height: 25vw;
-    }
-    .active-subox{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-    .active-img {
-        height: 50vw;
-        width: 100%;
-    }
+  .parks {
+      width: 40vw;
+      height: 40vw;
   }
-
-  @media screen and (max-width:576px) {
-    .all-parks {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1vw;
-    }
-    .parks {
-        width: 40vw;
-        height: 40vw;
-    }
-    .active-subox{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-    .active-img {
-        height: 50vw;
-        width: 100%;
-    }
+  .active-subox{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
   }
+  .active-img {
+      height: 50vw;
+      width: 100%;
+  }
+}
